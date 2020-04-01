@@ -1,14 +1,32 @@
 # advanced-smart-contract-final-assignment-
 
+Developed by:
+    Name:Karanjot Singh
+    Student Id: 101195883
+    Course: Advance Smart Contracts
+    
+    
+     #Introduction
+     This is an assignment for the Advanced Smart Contracts . I have used contract upgradeability and signing and verification patterns.
+     
+     #Signing and verification
+      The contract Transcript.sol handles the verification part. The signing part should be implemented off-chain with your own  private       key. To this use Signing.js for that.
+   
+   
+   #Upgradeability
+   
+   The Proxy.sol contract acts as the proxy contract that makes delegate call to Main.sol which implements the logic. 
+   State.sol holds the storage and Interact.sol contains of getter and setter functions for the storage. 
+   When using the Proxy.sol for the first time, you will need to call the upgradeTo function to set the implementation. 
+   The deployed contract already has it set. When you need to upgrade the Main.sol contract, 
+   it is mandatory to inherit Main.sol in the upgraded contract and call the upgradeTo function of the Proxy.sol contract.
+   
+   #effciency
+   The consensus operations are optimized to work eifficiently, even thought the loops are being used.
+   It is made sure that loops break as soon as the consensus is reached.
+     
+     #refrence
+     https://medium.com/quillhash/how-to-write-upgradable-smart-contracts-in-solidity-d8f1b95a0e9a
+     
 
-
- In Blockchain the Smart contract can be considered as the code segment that are executed over the block chain and defines some set of rules that are agreed by the both  the users/parties that are involved in a transactions.
-After any transaction execution, if the of previously rules for the transactions are met therefore the developed smart contract is executed spontaneously and generates the output. This bit of code permits decentralized mechanization by encouraging, checking, and authorizing the states of an underlying rules for the transactions.  Through the smart contracts it enables   the involved users/entities to exchange anything of worth by maintaining the proper record through the Contract.
-For the development of the smart contract the Ethereum ABI (Application binary interface) is used.  In addition to that web3 package is also used for the development of the contract. The ABI encryption is typically automated by different tools which are the part of the underlying compiler. This includes digital wallets that are capable of cooperating and interact with the underlying smart contracts. ABI encoder needs the description of the smart contract’s interface. The description includes the names and parameter types and transaction amount for that specific contract. For this program, in order to develop the smart contract, the description is provided as standardized JSON record.
- In case of smart contracts, they are coded with in explicitly detailed manner.  As it is executed spontaneously after transaction all the terms and conditions specified for the contract needs to be satisfied before completion. 
-
- 
-IN THIS I JUST TRY SOMETHING NEW TO DO IT 
-I AM ASLO POSTING A SMALL VIDEO IN WHICH IT HELPS YOU TO HOW IT WILL WORK AND RUN 
-
-I HOPE YOU LIKE THIS IT WILL BE VERY DIFFICULT FOR ME TO DO. UT I DID IT THANKS 
+     https://solidity.readthedocs.io/en/v0.5.3/
